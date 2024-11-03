@@ -3,7 +3,11 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # In-memory storage for expenses
-expenses = []
+expenses = [{
+    "description": "Lunch",
+    "amount": 10.5,
+    "date": "2023-11-01"
+}]
 
 @app.route('/expenses', methods=['GET'])
 def get_expenses():
